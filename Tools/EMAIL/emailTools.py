@@ -6,7 +6,7 @@ from colorama import Fore
 from getpass import getpass, getuser
 from smtplib import SMTPAuthenticationError, SMTP
 # https://github.com/LimerBoy/Twilight-Algoritm
-from tools.addons.twilight.twilight import Decrypt, Encrypt
+from Tools.addons.twilight.twilight import Decrypt, Encrypt
 
 # File with login data
 sender_email_database = "Tools/EMAIL/sender.json"

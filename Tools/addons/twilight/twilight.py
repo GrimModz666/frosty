@@ -1,7 +1,7 @@
 # Import modules
-import tools.addons.twilight.xor as Xor
-import tools.addons.twilight.salt as Salt
-import tools.addons.twilight.hash as Hash
+import Tools.addons.twilight.xor as Xor
+import Tools.addons.twilight.salt as Salt
+import Tools.addons.twilight.hash as Hash
 
 # Encrypt function
 def Encrypt(text, key):

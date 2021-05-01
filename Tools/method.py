@@ -3,21 +3,21 @@ from time import time, sleep
 from threading import Thread
 from colorama import Fore
 from humanfriendly import format_timespan, Spinner
-from tools.crash import CriticalError
-from tools.ipTools import GetTargetAddress, InternetConnectionCheck
+from Tools.crash import CriticalError
+from Tools.ipTools import GetTargetAddress, InternetConnectionCheck
 
 """ Find & import ddos method """
 
 
 def GetMethodByName(method):
     if method == "SMS":
-        dir = "tools.SMS.main"
+        dir = "Tools.SMS.main"
     elif method == "EMAIL":
-        dir = "tools.EMAIL.main"
+        dir = "Tools.EMAIL.main"
     elif method in ("SYN", "UDP", "NTP", "POD", "ICMP", "MEMCACHED"):
-        dir = f"tools.L4.{method.lower()}"
+        dir = f"Tools.L4.{method.lower()}"
     elif method in ("HTTP", "SLOWLORIS"):
-        dir = f"tools.L7.{method.lower()}"
+        dir = f"Tools.L7.{method.lower()}"
     else:
         raise SystemExit(
             f"{Fore.RED}[!] {Fore.MAGENTA}Unknown ddos method {repr(method)} selected..{Fore.RESET}"
@@ -56,7 +56,7 @@ class AttackMethod:
 
     # Exit
     def __exit__(self, exc_type, exc_val, exc_tb):
-        print(f"{Fore.MAGENTA}[!] {Fore.BLUE}Attack completed!{Fore.RESET}")
+        print(f"{Fore.MAGENTA}[!] {Fore.Purple}Attack completed!{Fore.RESET}")
 
     # Run time checker
     def __RunTimer(self):

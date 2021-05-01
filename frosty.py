@@ -8,11 +8,11 @@ import argparse
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 try:
-    from tools.crash import CriticalError
-    import tools.addons.clean
-    import tools.addons.logo
-    import tools.addons.winpcap
-    from tools.method import AttackMethod
+    from Tools.crash import CriticalError
+    import Tools.addons.clean
+    import Tools.addons.logo
+    import Tools.addons.winpcap
+    from Tools.method import AttackMethod
 except ImportError as err:
     CriticalError("Failed import some modules", err)
     sys.exit(1)

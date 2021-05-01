@@ -2,7 +2,7 @@
 from colorama import Fore
 
 # Logo
-print(rf"""{Fore.MAGENTA}
+print(rf"""{Fore.Purple}
 ████████████████████████████████████
 █▄─▄▄─█▄─▄▄▀█─▄▄─█─▄▄▄▄█─▄─▄─█▄─█─▄█
 ██─▄████─▄─▄█─██─█▄▄▄▄─███─████▄─▄██
